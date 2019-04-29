@@ -4,7 +4,7 @@ tenets:
 - name: always-close-response-body
   flows:
     codelingo/review:
-      comment: Close the response body when {{varName}} you are done to prevent open
+      comment: Close the response body ({{varName}}) when you are done to prevent open
         connections
   query: |
     import codelingo/ast/go
