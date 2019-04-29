@@ -76,6 +76,7 @@ func TestObjectService_Get_with_PresignedURL(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Object.Get returned error: %v", err)
 	}
+	defer resp.Body.Close()
 
 	b, _ := ioutil.ReadAll(resp.Body)
 	ref := string(b)
