@@ -61,7 +61,8 @@ func main() {
 	fmt.Printf("%s\n", resp.Status)
 
 	// head
-	if resp, err = c.Object.Head(ctx, name, nil); err != nil {
+	resp, err = c.Object.Head(ctx, name, nil)
+	if err != nil {
 		panic(err)
 		return
 	}
